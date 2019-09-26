@@ -1,10 +1,12 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+$primary-color: #262522;
+$secondary-color: #d04133;
+$third-color: #e4e4e4;
+$main-font: 'Muli', sans-serif;
 $show-home-image: true;
 $home-image: url("../img/background.jpg");
 $background-opacity: 0.9;
 @mixin easeOut {
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 @mixin background {
   @if $show-home-image {
@@ -30,7 +32,7 @@ $background-opacity: 0.9;
 // Set text $primary-color
 @function set-text-color($color){
   @if (lightness($color)>40){
-    @return #000;
+    @return #1e1e1e;
   } @else {
     @return #fff;
   }
