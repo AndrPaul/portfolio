@@ -1,12 +1,20 @@
-$primary-color: #262522;
-$secondary-color: #d04133;
-$third-color: #e4e4e4;
+$primary-color: #fff;
+$secondary-color: #494dc6;
+$third-color: #24272b;
 $main-font: 'Muli', sans-serif;
+$secondary-font: 'Vollkorn', serif;
+$third-font : 'Playfair Display', serif;
 $show-home-image: true;
-$home-image: url("../img/background.jpg");
-$background-opacity: 0.9;
+$home-image: url("../img/background3.jpg");
+$background-opacity: 0.8;
+$pattern : url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23494dc6' fill-opacity='0.06'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 @mixin easeOut {
   transition: all 0.3s ease-out;
+}
+@mixin boxShadow {
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.15);
 }
 @mixin background {
   @if $show-home-image {
@@ -32,7 +40,7 @@ $background-opacity: 0.9;
 // Set text $primary-color
 @function set-text-color($color){
   @if (lightness($color)>40){
-    @return #1e1e1e;
+    @return #24272b;
   } @else {
     @return #fff;
   }
