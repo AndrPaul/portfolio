@@ -80,29 +80,39 @@ main {
       margin-top: 20vh;
     }
   }
+  &#about,
+    &#work,
+    &#contact {
+    background-color: $whitesade;
+  }
 }
 
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bio bio bioimage' 'job1 job2 job3';
   grid-template-columns: repeat(3,1fr);
 
   .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: 3px solid $secondary-color;
-    width: 220px;
-    height: 220px;
+    border: 2px solid $secondary-color;
+    width: 250px;
+    height: 250px;
   }
 
   .bio {
     grid-area: bio;
     @include boxShadow;
     padding: 1rem;
-    border-bottom: 5px solid $secondary-color;
+    border: 1px solid $secondary-color;
     border-radius: 5px;
+    background-color: $primary-color;
+    h3{
+      border-bottom: 1px solid $secondary-color;
+      padding-bottom: 1rem;
+    }
   }
 
   .job-1 {
@@ -115,14 +125,33 @@ main {
 
   .job-3 {
     grid-area: job3;
+      a{
+      display: flex;
+      justify-content: center;
+
+
+      .diploma {
+        height: 320px;
+        &:hover{
+          height: 330px;
+        }
+
+      }
+
+    }
+
   }
 
   .job {
     background: darken($primary-color, 0.5);
     @include boxShadow;
     padding: 1rem;
-    border-bottom: 5px solid $secondary-color;
+    border: 1px solid $secondary-color;
     border-radius: 5px;
+    h3{
+      border-bottom: 1px solid $secondary-color;
+      padding-bottom: 1rem;
+    }
   }
 }
 // Work/Projects
@@ -198,8 +227,8 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($primary-color,10);
-  color: set-text-color($primary-color);
-  height: 60px;
+  background: $third-color;
+  color: set-text-color($third-color);
+  height: 50px;
 }
 @import 'mobile';

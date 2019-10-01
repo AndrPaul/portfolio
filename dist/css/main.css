@@ -5,8 +5,8 @@
 .menu-btn {
   position: absolute;
   z-index: 3;
-  right: 35px;
-  top: 35px;
+  right: 20px;
+  top: 30px;
   cursor: pointer;
   transition: all 0.3s ease-out; }
   .menu-btn:hover .btn-line {
@@ -32,7 +32,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  visibility: hidden; }
+  visibility: hidden;
+  overflow: hidden; }
   .menu.show {
     visibility: visible; }
   .menu-branding, .menu-nav {
@@ -242,41 +243,57 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+  main#about, main#work, main#contact {
+    background-color: #f9f9f9; }
 
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bio bio bioimage' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: 3px solid #494dc6;
-    width: 220px;
-    height: 220px; }
+    border: 2px solid #494dc6;
+    width: 250px;
+    height: 250px; }
   .about-info .bio {
     grid-area: bio;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
     padding: 1rem;
-    border-bottom: 5px solid #494dc6;
-    border-radius: 5px; }
+    border: 1px solid #494dc6;
+    border-radius: 5px;
+    background-color: #fff; }
+    .about-info .bio h3 {
+      border-bottom: 1px solid #494dc6;
+      padding-bottom: 1rem; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
+    .about-info .job-3 a {
+      display: flex;
+      justify-content: center; }
+      .about-info .job-3 a .diploma {
+        height: 320px; }
+        .about-info .job-3 a .diploma:hover {
+          height: 330px; }
   .about-info .job {
     background: #fefefe;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
     padding: 1rem;
-    border-bottom: 5px solid #494dc6;
+    border: 1px solid #494dc6;
     border-radius: 5px; }
+    .about-info .job h3 {
+      border-bottom: 1px solid #494dc6;
+      padding-bottom: 1rem; }
 
 .projects {
   display: grid;
@@ -329,9 +346,9 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #e6e6e6;
-  color: #24272b;
-  height: 60px; }
+  background: #24272b;
+  color: #fff;
+  height: 50px; }
 
 @media screen and (min-width: 1171px) {
   .projects {
