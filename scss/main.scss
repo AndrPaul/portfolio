@@ -3,8 +3,7 @@
 @import 'skillbars';
 @import url('https://fonts.googleapis.com/css?family=Muli|Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
 
 * {
   box-sizing: border-box;
@@ -26,10 +25,10 @@ h3 {
   margin: 0;
 
   &.lg-heading {
+    padding-top: 2rem;
     font-size: 5rem;
     font-family: $third-font;
     font-weight: normal;
-
   }
 
   &.sm-heading {
@@ -55,7 +54,8 @@ header {
 }
 
 main {
-  padding: 4rem;
+
+  padding: 3rem;
   //height: 100%;
   min-height: calc(100vh - 60px);
 
@@ -80,9 +80,10 @@ main {
       margin-top: 20vh;
     }
   }
+
   &#about,
-    &#work,
-    &#contact {
+  &#contact,
+  &#work {
     background-color: $whitesade;
   }
 }
@@ -109,7 +110,8 @@ main {
     border: 1px solid $secondary-color;
     border-radius: 5px;
     background-color: $primary-color;
-    h3{
+
+    h3 {
       border-bottom: 1px solid $secondary-color;
       padding-bottom: 1rem;
     }
@@ -125,44 +127,53 @@ main {
 
   .job-3 {
     grid-area: job3;
-      a{
+
+    a {
       display: flex;
       justify-content: center;
 
-
       .diploma {
         height: 320px;
-        &:hover{
+        @include easeOut;
+
+        &:hover {
           height: 330px;
         }
-
       }
-
     }
-
   }
 
   .job {
-    background: darken($primary-color, 0.5);
+    background: $primary-color;
     @include boxShadow;
     padding: 1rem;
     border: 1px solid $secondary-color;
     border-radius: 5px;
-    h3{
+
+    h3 {
       border-bottom: 1px solid $secondary-color;
       padding-bottom: 1rem;
     }
   }
 }
 // Work/Projects
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
 
+  .item {
+    background: $primary-color;
+    @include boxShadow;
+    padding: 1rem;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+  }
+
   img {
     width: 100%;
-    border: 3px #fff solid;
+    border-radius: 1px;
 
     &:hover {
       opacity: 0.5;
@@ -173,28 +184,93 @@ main {
 }
 //Contact page
 
+
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-areas: 'form form form sideInfo';
+  grid-template-columns: repeat(3,1fr);
 
-  div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    @include easeOut;
+  .sideInfo {
+    grid-area: sideInfo;
+    padding: 2rem;
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-radius: 5px;
+    line-height: 2;
+    @include boxShadow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
 
-    &:hover {
-      padding: 0.5rem 1.5rem;
-      background: $secondary-color;
-      color: set-text-color($secondary-color);
 
-      span {
-        color: set-text-color($secondary-color);
-      }
+    .copyBtn {
+      background-color: $primary-color;
+      color: $secondary-color;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border-style: none;
+      font-weight: bold;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+
+
+
+  }
+
+  .form {
+    grid-area: form;
+    padding: 1rem;
+    background-color: $primary-color;
+    border-radius: 5px;
+    border: 1px solid $secondary-color;
+    @include boxShadow;
+    text-align: left;
+
+    h3 {
+      padding-bottom: 1rem;
+      border-bottom:  1px solid $secondary-color;
+      margin-bottom: 2rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid $secondary-color;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: $secondary-color;
+      color: white;
+      padding: 15px 80px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+    }
+
+    input[type=submit]:hover {
+      border: 1px solid $secondary-color;
+      background-color: $primary-color;
+      color: $secondary-color;
+      padding: 14px 80px;
+
     }
   }
 }
@@ -203,24 +279,24 @@ main {
 .btn {
   display: block;
   padding: 0.5rem 1rem;
-  border: 0;
+  border-radius: 1px;
   margin-bottom: 0.3rem;
 
   &:hover {
     background: $secondary-color;
-    color: set-text-color($secondary-color);
+    color: $primary-color;
   }
 }
 
 .btn-dark {
   @extend .btn;
-  background: darken($primary-color, 50);
+  background: $third-color;
   color: #fff;
 }
 
 .btn-light {
   @extend .btn;
-  background: lighten($primary-color, 50);
+  background: lighten($third-color,70);
   color: #333;
 }
 

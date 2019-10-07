@@ -1,5 +1,3 @@
-//skill bars animations
-
 
 // Select DOM Items
 const menuBtn =  document.querySelector('.menu-btn');
@@ -35,3 +33,11 @@ function toggleMenu(){
 
   }
 }
+
+
+tippy('.copyBtn', {
+  trigger:'click',
+  content: "Copied!",
+  placement: 'right',
+  duration: [800, 300],
+});

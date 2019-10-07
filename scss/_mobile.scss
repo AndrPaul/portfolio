@@ -12,11 +12,23 @@
 }
 // Tablets & Small Laptops
 @include mediaMd {
+  .boxes {
+
+      grid-template-areas :
+      'sideInfo'
+      'form'
+      ;
+      grid-template-columns: 1fr;
+
+  }
   main {
     align-items: center;
-    text-align: center;
+    text-align:  center;
+    padding: 2rem;
+
 
     .lg-heading {
+      padding-top: 3rem;
       line-height: 1.1;
       margin-bottom: 1rem;
 
@@ -47,14 +59,7 @@
     height: 25vh;
     transform: translate3d(100%,0,0);
 
-    .portrait {
-      background: url('../img/logo.png');
-      width: 110px;
-      height: 110px;
-      background-color: $primary-color;
-      background-position: center;
-      background-size: contain;
-    }
+    
   }
   .about-info {
     grid-template-areas :
@@ -79,16 +84,26 @@
   }
 
   main {
+    padding: 1rem;
 
     .lg-heading {
+      padding-top: 4rem;
       line-height: 1;
-      margin-bottom: 1rem;
       font-size: 4rem;
 
     }
-    &.sm-heading {
-      font-size: 1rem;
+    .sm-heading {
+      font-size: 1.3rem;
 
+    }
+  }
+
+  .about-info {
+
+    .bio-image {
+
+      width: 200px;
+      height: 200px;
     }
   }
 }

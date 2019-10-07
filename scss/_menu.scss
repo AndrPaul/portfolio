@@ -1,28 +1,43 @@
+
 .menu-btn {
   position: absolute;
   z-index: 3;
-  right: 20px;
-  top: 30px;
   cursor: pointer;
   @include easeOut;
+  width: 100%;
+  padding: 1rem;
+  background-color: $primary-color;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid $secondary-color;
+  @include boxShadow;
 
-  &:hover .btn-line {
-    background-color: $secondary-color;
-  }
+
+
+
+
 
   .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px;
-    background: set-text-color($primary-color);
+    background-color: $secondary-color;
     @include easeOut;
+    float: right;
+
+
   }
   //Rotate into X with menu lines
   &.close {
-    transform: rotate(180deg);
+    background-color:transparent;
+    border-bottom: 0px;
+    box-shadow: none;
+
 
     .btn-line {
-      background-color: $secondary-color;
+
       // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -94,9 +109,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      border-radius: 1px;
-      line-height: 1;
+      align-items:flex-end;
+      line-height: 0.9;
 
 
       h1 {
@@ -105,8 +119,13 @@
         font-weight: normal;
       }
       h2{
-        font-size: 2.3rem;
+        font-size: 2.2rem;
         font-family: $third-font;
+        font-weight: normal;
+      }
+      h3{
+        font-family: $third-font;
+        font-size:1.2rem;
         font-weight: normal;
       }
     }
