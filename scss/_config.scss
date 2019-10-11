@@ -1,10 +1,25 @@
+@font-face {
+    font-family: 'aileronblack';
+    src: url('Aileron-Black-webfont.eot');
+    src: url('Aileron-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Aileron-Black-webfont.woff2') format('woff2'),
+         url('Aileron-Black-webfont.woff') format('woff'),
+         url('Aileron-Black-webfont.ttf') format('truetype'),
+         url('Aileron-Black-webfont.svg#aileronblack') format('svg');
+    font-weight: bolder;
+    font-style: normal;
+
+}
+
+
+
 $primary-color: #fff;
-$secondary-color: #494dc6;
+$secondary-color: #DD3434;
 $third-color: #24272b;
-$whitesade: #f9f9f9;
+$whitesade: #2a2a2a;
 $main-font: 'Muli', sans-serif;
 $secondary-font: 'Vollkorn', serif;
-$third-font : 'Source Serif Pro', serif;
+$third-font : 'aileronblack', sans-serif;
 $show-home-image: true;
 $home-image: url("../img/background3.jpg");
 $background-opacity: 0.8;
@@ -13,9 +28,9 @@ $background-opacity: 0.8;
   transition: all 0.3s ease-out;
 }
 @mixin boxShadow {
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.15);
--moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.15);
-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(36,39,43,0.4);
+-moz-box-shadow: 0px 0px 5px 0px rgba(36,39,43,0.4);
+box-shadow: 0px 0px 5px 0px rgba(36,39,43,0.4);
 }
 @mixin background {
   @if $show-home-image {

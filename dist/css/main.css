@@ -1,27 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Muli|Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Vollkorn&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@font-face {
+  font-family: 'aileronblack';
+  src: url("Aileron-Black-webfont.eot");
+  src: url("Aileron-Black-webfont.eot?#iefix") format("embedded-opentype"), url("Aileron-Black-webfont.woff2") format("woff2"), url("Aileron-Black-webfont.woff") format("woff"), url("Aileron-Black-webfont.ttf") format("truetype"), url("Aileron-Black-webfont.svg#aileronblack") format("svg");
+  font-weight: bolder;
+  font-style: normal; }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
   cursor: pointer;
   transition: all 0.3s ease-out;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 5rem;
   background-color: #fff;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-  border-bottom: 1px solid #494dc6;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15); }
+  border-bottom: 1px solid #DD3434;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+  box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4); }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px;
-    background-color: #494dc6;
+    background-color: #DD3434;
     transition: all 0.3s ease-out;
     float: right; }
   .menu-btn.close {
@@ -76,14 +84,14 @@
       line-height: 0.9; }
       .menu-branding .logo h1 {
         font-size: 4rem;
-        font-family: "Source Serif Pro", serif;
+        font-family: "aileronblack", sans-serif;
         font-weight: normal; }
       .menu-branding .logo h2 {
         font-size: 2.2rem;
-        font-family: "Source Serif Pro", serif;
+        font-family: "aileronblack", sans-serif;
         font-weight: normal; }
       .menu-branding .logo h3 {
-        font-family: "Source Serif Pro", serif;
+        font-family: "aileronblack", sans-serif;
         font-size: 1.2rem;
         font-weight: normal; }
   .menu .nav-item {
@@ -92,7 +100,7 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #494dc6;
+      color: #DD3434;
       font-weight: bold; }
   .menu .nav-link {
     display: inline-block;
@@ -105,7 +113,7 @@
     transition: all 0.3s ease-out;
     text-align: center; }
     .menu .nav-link:hover {
-      color: #494dc6;
+      color: #DD3434;
       font-weight: bolder; }
 
 .nav-item:nth-child(1) {
@@ -194,7 +202,7 @@ body {
   color: #24272b;
   margin: 0;
   font-family: "Muli", sans-serif;
-  line-height: 1.2; }
+  line-height: 1.1; }
   body#bg-img {
     background: url("../img/background3.jpg");
     background-attachment: fixed;
@@ -216,16 +224,15 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    padding-top: 2rem;
     font-size: 5rem;
-    font-family: "Source Serif Pro", serif;
-    font-weight: normal; }
+    font-family: "aileronblack", sans-serif;
+    font-weight: normal;
+    color: #fff; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
-    margin-bottom: 2rem;
     font-size: 1.4rem;
-    padding: 0.4rem 0.5rem; }
+    color: #fff; }
 
 a {
   color: #fff;
@@ -237,49 +244,71 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #494dc6; }
+  color: #DD3434; }
+
+.head-container {
+  margin-top: 5rem;
+  border-radius: 5px; }
+
+.top-head {
+  background: #2a2a2a;
+  height: 50vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
 
 main {
-  padding: 3rem;
+  padding: 2rem;
   min-height: calc(100vh - 60px); }
+  main #homename {
+    font-size: 5rem; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
       padding: 0.4rem;
       color: #24272b; }
       main .icons a:hover {
-        color: #494dc6;
+        color: #DD3434;
         transition: all 0.3s ease-out; }
   main#home {
     overflow: hidden; }
+    main#home .lg-heading {
+      color: #2a2a2a; }
+    main#home.sm-heading {
+      color: #2a2a2a; }
     main#home h1 {
       margin-top: 20vh; }
   main#about, main#contact, main#work {
-    background-color: #f9f9f9; }
+    background-color: #2a2a2a; }
 
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bio bio bioimage' 'job1 job2 job3';
+  grid-template-areas: "bio bio bioimage" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: 2px solid #494dc6;
+    border: 2px solid #DD3434;
     width: 250px;
-    height: 250px; }
+    height: 250px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4); }
   .about-info .bio {
     grid-area: bio;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
     padding: 1rem;
-    border: 1px solid #494dc6;
+    border: 1px solid #DD3434;
     border-radius: 5px;
     background-color: #fff; }
     .about-info .bio h3 {
-      border-bottom: 1px solid #494dc6;
+      border-bottom: 1px solid #DD3434;
       padding-bottom: 1rem; }
   .about-info .job-1 {
     grid-area: job1; }
@@ -297,14 +326,14 @@ main {
           height: 330px; }
   .about-info .job {
     background: #fff;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
     padding: 1rem;
-    border: 1px solid #494dc6;
+    border: 1px solid #DD3434;
     border-radius: 5px; }
     .about-info .job h3 {
-      border-bottom: 1px solid #494dc6;
+      border-bottom: 1px solid #DD3434;
       padding-bottom: 1rem; }
 
 .projects {
@@ -313,24 +342,46 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects .item {
     background: #fff;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
     padding: 1rem;
-    border: 1px solid #494dc6;
+    border: 1px solid #DD3434;
     border-radius: 5px; }
   .projects img {
     width: 100%;
-    border-radius: 1px; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #494dc6;
-      transition: all 0.3s ease-out; }
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    margin-bottom: 1rem; }
+  .projects .project-info {
+    padding: 0.1rem; }
+  .projects .btn, .projects .btn-dark, .projects .btn-light {
+    display: block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin-bottom: 0.3rem;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4); }
+    .projects .btn:hover, .projects .btn-dark:hover, .projects .btn-light:hover {
+      background: #fff;
+      color: #DD3434;
+      border: 1px solid #DD3434;
+      padding: 14px 25px; }
+  .projects .btn-dark {
+    background: #24272b;
+    color: #fff;
+    margin-bottom: 1rem; }
+  .projects .btn-light {
+    background: #DD3434;
+    color: #fff; }
 
 .boxes {
   display: grid;
   grid-gap: 1rem;
-  grid-template-areas: 'contactImg form form sideInfo';
+  grid-template-areas: "contactImg form form sideInfo";
   grid-template-columns: repeat(4, 1fr); }
   .boxes .contactImg {
     border-radius: 5px;
@@ -340,24 +391,27 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    border: 1px solid #494dc6;
+    border: 1px solid #DD3434;
     z-index: 0;
-    min-width: 200px; }
+    min-width: 200px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4); }
   .boxes .sideInfo {
     grid-area: sideInfo;
     padding: 1rem;
     background-color: #fff;
     background-image: url("../img/sideInfo.png");
-    border: 1px solid #494dc6;
+    border: 1px solid #DD3434;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     color: #fff;
     border-radius: 5px;
     line-height: 2;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -369,80 +423,68 @@ main {
       font-size: 20px; }
     .boxes .sideInfo .copyBtn {
       background-color: #fff;
-      color: #494dc6;
-      padding: 0.5rem 0.5rem;
+      color: #DD3434;
+      padding: 0.5rem;
       border-radius: 5px;
       border-style: none;
       font-weight: bold;
       font-size: 15px;
       cursor: pointer;
-      -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-      -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15); }
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+      box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4); }
   .boxes .form {
     grid-area: form;
     padding: 1rem;
     background-color: #fff;
     border-radius: 5px;
-    border: 1px solid #494dc6;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    border: 1px solid #DD3434;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
     text-align: left;
     width: 100%; }
     .boxes .form p.statusMsg {
-      font-size: 18px; }
+      font-size: 16px; }
     .boxes .form p.succdiv {
-      color: #008000; }
+      color: #36b036;
+      text-align: center;
+      padding-bottom: 1rem; }
     .boxes .form p.errordiv {
-      color: #E80000; }
+      color: #e80000; }
     .boxes .form h3 {
       padding-bottom: 1rem;
-      border-bottom: 1px solid #494dc6;
+      border-bottom: 1px solid #DD3434;
       margin-bottom: 2rem; }
     .boxes .form label {
       font-weight: bold; }
-    .boxes .form input[type=text],
-    .boxes .form input[type=email],
+    .boxes .form input[type="email"],
+    .boxes .form input[type="text"],
     .boxes .form select,
     .boxes .form textarea {
       width: 100%;
       padding: 1rem;
-      border: 1px solid #494dc6;
+      border: 1px solid #DD3434;
       border-radius: 4px;
       box-sizing: border-box;
       margin-top: 6px;
       margin-bottom: 16px;
       resize: vertical; }
-    .boxes .form input[type=submit] {
-      background-color: #494dc6;
+    .boxes .form input[type="submit"] {
+      background-color: #DD3434;
       color: white;
       padding: 15px 80px;
       border: none;
       border-radius: 5px;
-      cursor: pointer; }
-    .boxes .form input[type=submit]:hover {
-      border: 1px solid #494dc6;
+      cursor: pointer;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4);
+      box-shadow: 0px 0px 5px 0px rgba(36, 39, 43, 0.4); }
+    .boxes .form input[type="submit"]:hover {
+      border: 1px solid #DD3434;
       background-color: #fff;
-      color: #494dc6;
+      color: #DD3434;
       padding: 14px 80px; }
-
-.btn, .btn-dark, .btn-light {
-  display: block;
-  padding: 0.5rem 1rem;
-  border-radius: 1px;
-  margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #494dc6;
-    color: #fff; }
-
-.btn-dark {
-  background: #24272b;
-  color: #fff; }
-
-.btn-light {
-  background: #d7dadd;
-  color: #333; }
 
 #main-footer {
   text-align: center;
@@ -461,18 +503,24 @@ main {
 
 @media screen and (max-width: 768px) {
   .boxes {
-    grid-template-areas: 'sideInfo' 'form';
+    grid-template-areas: 'sideInfo' 'form';
     grid-template-columns: 1fr; }
+    .boxes .contactImg {
+      display: none; }
   main {
     align-items: center;
-    text-align: center;
+    text-align: left;
     padding: 2rem; }
+    main .icons {
+      text-align: center; }
     main .lg-heading {
       padding-top: 3rem;
       line-height: 1.1;
-      margin-bottom: 1rem; }
-    main.sm-heading {
-      font-size: 4rem; }
+      margin-bottom: 1rem;
+      text-align: center; }
+    main .sm-heading {
+      font-size: 1.4rem;
+      text-align: center; }
   div.menu-branding,
   ul.menu-nav {
     float: none;
@@ -489,7 +537,7 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
@@ -504,7 +552,7 @@ main {
     main .lg-heading {
       padding-top: 4rem;
       line-height: 1;
-      font-size: 4rem; }
+      font-size: 4.5rem; }
     main .sm-heading {
       font-size: 1.3rem; }
   .about-info .bio-image {
