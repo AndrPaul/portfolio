@@ -24,18 +24,18 @@ h1,
 h2,
 h3 {
   margin: 0;
-
   &.lg-heading {
-
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: $third-font;
-    font-weight: normal;
     color: $primary-color;
+    text-shadow: 2px 3px $third-color;
   }
 
   &.sm-heading {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: $primary-color;
+    font-weight: lighter;
+    text-shadow: 0 1px $third-color;
   }
 }
 
@@ -45,7 +45,6 @@ a {
 }
 
 header {
-  position: fixed;
   z-index: 2;
   width: 100%;
 }
@@ -54,71 +53,95 @@ header {
   color: $secondary-color;
 }
 .head-container {
-  margin-top: 5rem;
-
-
 
   border-radius: 5px;
-
+  position: absolute;
+  top: 94px;
 }
 .top-head{
-  background: $whitesade;
-  height: 50vh;
-
-
   text-align:center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 0;
+  background: url("../img/background4.jpg");
+  background-size:cover;
+  background-position:center;
+  height: 350px;
+  line-height: 2;
+  border-bottom: 1px solid $secondary-color;
+
 }
 
 main {
-  padding: 2rem;
+
+
   //height: 100%;
   min-height: calc(100vh - 60px);
 
-  #homename {
-    font-size: 5rem;
-  }
 
-  .icons {
-    margin-top: 1rem;
 
-    a {
-      padding: 0.4rem;
-      color: set-text-color($primary-color);
-
-      &:hover {
-        color: $secondary-color;
-        @include easeOut();
-      }
-    }
-  }
 
   &#home {
     overflow: hidden;
+    padding: 2rem;
+    line-height: 1.5;
+    #index-nav {
+
+      margin-top: 2rem;
+      margin-left: 0.3rem;
+
+
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        li {
+          list-style-type: none;
+          text-transform: uppercase;
+          padding: 9px 0px 9px 0px;
+          border-left: 1px solid $secondary-color;
+          @include easeOut;
+
+          &:hover{
+            border-left: 1.3px solid $primary-color;
+          }
+
+          a {
+            padding: 10px 30px;
+            color: $primary-color;
+            text-shadow: 0px 1px $third-color;
+            &:hover{
+              color: $primary-color;
+            }
+          }
+
+
+        }
+      }
+    }
+
     .lg-heading {
-
-
-      color: $whitesade;
+      font-size: 5rem;
     }
 
-    &.sm-heading {
-
-      color: $whitesade;
+    .sm-heading {
+      margin-left:5px;
     }
-
 
     h1 {
-      margin-top: 20vh;
+      margin-top: 30vh;
     }
   }
 
   &#about,
   &#contact,
   &#work {
+    padding:5rem 2rem 2rem 2rem;
     background-color: $whitesade;
+
   }
 }
 
@@ -259,7 +282,7 @@ main {
     border-radius: 5px;
     height: 100%;
     background-color: $primary-color;
-    background-image: url("../img/contact.png");
+    background-image: url("../img/contact1.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -273,7 +296,7 @@ main {
     grid-area: sideInfo;
     padding: 1rem;
     background-color: $primary-color;
-    background-image: url("../img/sideInfo.png");
+    background-image: url("../img/contact2.svg");
     border: 1px solid $secondary-color;
     background-size: cover;
     background-repeat: no-repeat;

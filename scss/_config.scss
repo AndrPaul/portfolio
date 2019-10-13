@@ -6,23 +6,21 @@
          url('Aileron-Black-webfont.woff') format('woff'),
          url('Aileron-Black-webfont.ttf') format('truetype'),
          url('Aileron-Black-webfont.svg#aileronblack') format('svg');
-    font-weight: bolder;
+    font-weight: normal;
     font-style: normal;
 
 }
 
-
-
 $primary-color: #fff;
-$secondary-color: #DD3434;
+$secondary-color: #0E5F76;
 $third-color: #24272b;
-$whitesade: #2a2a2a;
+$whitesade: #f3f5da;
 $main-font: 'Muli', sans-serif;
 $secondary-font: 'Vollkorn', serif;
 $third-font : 'aileronblack', sans-serif;
 $show-home-image: true;
 $home-image: url("../img/background3.jpg");
-$background-opacity: 0.8;
+$background-opacity: 0.3;
 
 @mixin easeOut {
   transition: all 0.3s ease-out;
@@ -46,7 +44,7 @@ box-shadow: 0px 0px 5px 0px rgba(36,39,43,0.4);
         right: 0;
         width: 100%;
         height: 100%;
-        background: rgba($primary-color, $background-opacity);
+        background: rgba($third-color, $background-opacity);
         z-index: -1;
       }
     }

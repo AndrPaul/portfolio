@@ -1,24 +1,32 @@
+.menu-btn-container {
+background: $secondary-color;
+  height:225px;
+  width: 100%;
+
+
+
+}
 
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   cursor: pointer;
   @include easeOut;
   width: 100%;
-  padding: 1rem 5rem;
-  background-color: $primary-color;
+  padding: 1rem 1.5rem;
+  background-color: $secondary-color;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-  border-bottom: 1px solid $secondary-color;
-  @include boxShadow;
+
 
   .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px;
-    background-color: $secondary-color;
+    background-color: $primary-color;
+
     @include easeOut;
     float: right;
 
@@ -32,6 +40,7 @@
 
 
     .btn-line {
+      background-color: $secondary-color;
 
       // Line 1 - Rotate
       &:nth-child(1) {
@@ -56,6 +65,7 @@
   width: 100%;
   visibility: hidden;
   overflow: hidden;
+  z-index: 2;
 
   &.show {
     visibility: visible;
@@ -111,17 +121,17 @@
       h1 {
         font-size: 4rem;
         font-family: $third-font;
-        font-weight: normal;
+
       }
       h2{
         font-size: 2.2rem;
         font-family: $third-font;
-        font-weight: normal;
+
       }
       h3{
         font-family: $third-font;
         font-size:1.2rem;
-        font-weight: normal;
+
       }
     }
   }

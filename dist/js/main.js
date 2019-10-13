@@ -33,7 +33,11 @@ function toggleMenu(){
 
   }
 }
+const heading =  document.querySelector('.lg-heading');
+heading.classList.add('animated', 'bounceInDown');
 
+const smHeading =  document.querySelector('.sm-heading');
+smHeading.classList.add('animated', 'fadeInUp');
 
 tippy('.copyBtn', {
   trigger:'click',
